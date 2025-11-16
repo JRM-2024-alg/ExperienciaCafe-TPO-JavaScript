@@ -338,7 +338,7 @@ main{
   }
 
   .hamburger {
-    display: block;           /* aparece */
+    display: block;         
   }
 
   .site-nav .menu {
@@ -353,10 +353,16 @@ main{
     display: flex !important;
   }
 
-  /* cuando el nav tiene la clase .open, se muestra */
   .site-nav.open .menu {
     display: flex;
   }
+  .site-nav-footer .menu {
+      display: flex;
+      flex-direction: column !important; 
+      gap: 0.5rem;
+      align-items: center; 
+  }
+
 }
 
 
