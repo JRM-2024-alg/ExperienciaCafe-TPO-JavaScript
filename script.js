@@ -1,3 +1,5 @@
+console.log("JS cargado OK");
+
 function calcularTotal() {
   const cantidades = document.querySelectorAll(".cantidad");
   let productos = [];
@@ -46,16 +48,18 @@ function calcularTotal() {
   document.getElementById("detalleDescuento").textContent = detalle;
 }
 
-document.getElementById("calcularTotal").addEventListener("click", function(e) {
-  e.preventDefault(); // Evita que el enlace mueva la página
-  calcularTotal(); // Llama a tu función
+const btnCalcular = document.getElementById("calcularTotal");
+if (btnCalcular) {
+  btnCalcular.addEventListener("click", function(e) {
+    e.preventDefault();
+    calcularTotal();
 
-  // 👇 Hace foco en el resultado
-  document.getElementById("resultado").scrollIntoView({
-    behavior: "smooth",
-    block: "center"
+    document.getElementById("resultado").scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
   });
-});
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburgerBtn");
