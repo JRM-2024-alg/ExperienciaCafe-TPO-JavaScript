@@ -57,3 +57,14 @@ document.getElementById("calcularTotal").addEventListener("click", function(e) {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburgerBtn");
+    const nav = document.querySelector(".site-nav");
+
+    hamburger.addEventListener("click", function () {
+        nav.classList.toggle("open");
+    });
+});
+
+
+

@@ -296,12 +296,29 @@ main{
     margin: auto;
 }
 
+.hamburger {
+  display: none;           
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+
+
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;   /* Nav debajo de la marca */
     align-items: flex-start;
   }
+
+  .site-header-logo{
+    flex-direction: column;   /* Nav debajo de la marca */
+    align-items: center;
+  }
+
   .site-nav .menu {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
@@ -322,7 +339,25 @@ main{
     flex-direction: column;
     align-items: center;
   }
+
+  .hamburger {
+    display: block;           /* aparece */
+  }
+
+  .site-nav .menu {
+    display: none;            /* oculto por defecto */
+    flex-direction: column;
+    gap: 1rem;
+    background: #eee0ca;
+    padding: 1rem;
+  }
+
+  /* cuando el nav tiene la clase .open, se muestra */
+  .site-nav.open .menu {
+    display: flex;
+  }
 }
+
 
 /* === Promociones === */
 
