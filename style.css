@@ -20,6 +20,14 @@ main{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #eee0ca;
+  border-bottom: 1px solid #e2ddd5;
+}
+
+.site-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   gap: 1rem;
   padding: 1rem 1.25rem;
   background: #eee0ca;
@@ -117,6 +125,12 @@ main{
   display: block;
   border-radius: 0.75rem;
 }
+
+.logo{
+  width: 100px;
+  height: auto;
+}
+
 .hero-media:hover{
     transform: scale(1.05);
 }
